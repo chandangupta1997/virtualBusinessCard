@@ -6,18 +6,18 @@ const { default: mongoose } = require("mongoose") // just for checking object id
 
 const createBusCard = async function(req,res){
 
-    const userData = req.body
-    const logo = req.files
+    let logo = req.files
+    let  formData = req.body
 
 
     //destruturing for validation purpose 
 
-    let { name, designation, companyName, contactNo, emailId,websiteUrl,socialMediaLinks } = userData
+    let { name, designation, companyName, contactNo, emailId,websiteUrl,socialMediaLinks } = formData
 
 
 
     let  companyLogo = await awsConnection.uploadProfileImage(logo)
-        if (!companyLogo) return res.status(400).send({ status: false, message: "there is an error to upload profile image. for more details move on console" })
+        if (!companyLogo) return res.status(400).send({ status: false, message: "upload error" })
 
         console.log(companyLogo)
        
@@ -26,7 +26,6 @@ const createBusCard = async function(req,res){
             "designation": designation,
             "companyName": companyName,
             "contactNo": contactNo,
-            
             "websiteUrl": websiteUrl,
             "socialMediaLinks" :socialMediaLinks,
             "emailId": emailId,
