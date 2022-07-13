@@ -7,7 +7,7 @@ const businessController = require('../controllers/businessController')
 
 router.post('/BusinessCard',businessController.createBusCard)
 
-router.get('BusinessCard/:cardId',businessController.getBusinessCard)
+router.get('/BusinessCard/:cardId',businessController.getBusinessCard)
 
 
 
