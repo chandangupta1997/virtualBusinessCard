@@ -16,6 +16,10 @@ Three social URLs : array of string or objects
 Company Logo   :   req.files (will return a aws s3 bucket link )
 
 
+Intern Model
+{ name: {mandatory}, email: {mandatory, valid email, unique}, mobile: {mandatory, valid mobile number, unique}, collegeId: {ObjectId, ref to college model, isDeleted: {boolean, default: false}}
+
+
 
 POST /functionup/colleges
 Create a business Card -  not.
@@ -61,25 +65,53 @@ Error Response structure
   message: ""
 }
 Collections samples
+College
 {
-    "status": true,
-    "message": "card created successfully",
-    "data": {
-        "name": "chandan",
-        "designation": "CEO",
-        "companyName": "GoodFood",
-        "contactNo": 8700491177,
-        "emailId": "chandanokokok@gmail.com",
-        "companyLogo": "false",
-        "websiteUrl": "goodfood.com",
-        "socialMediaLinks": [
-            "[{abc},{efg},{iop}]"
-        ],
-
-       "companyLogo": "https://classroom-training-bucket.s3.ap-south-1.amazonaws.com/sonuVerma/raphael-renter-csae9W8JAsw-unsplash.jpg",
-       
-        "isDeleted": false,
-        "_id": "62ce73e69a3186f7dbb9e20d",
-        "__v": 0
-    }
+    "name" : "iith",
+    "fullName" : "Indian Institute of Technology, Hyderabad",
+    "logoLink" : "https://functionup.s3.ap-south-1.amazonaws.com/colleges/iith.png",
+    "isDeleted" : false
+}
+Intern
+   {
+    "isDeleted" : false,
+    "name" : "Jane Does",
+    "email" : "jane.doe@iith.in",
+    "mobile" : "90000900000",
+    "collegeId" : ObjectId("888771129c9ea621dc7f5e3b")
+}
+Response samples
+College details
+{
+  "data": {
+    "name": "xyz",
+    "fullName": "Some Institute of Engineering and Technology",
+    "logoLink": "some public s3 link for a college logo",
+    "interests": [
+      {
+        "_id": "123a47301a53ecaeea02be59",
+        "name": "Jane Doe",
+        "email": "jane.doe@miet.ac.in",
+        "mobile": "8888888888"
+      },
+      {
+        "_id": "45692c0e1a53ecaeea02b1ac",
+        "name": "John Doe",
+        "email": "john.doe@miet.ac.in",
+        "mobile": "9999999999"
+      },
+      {
+        "_id": "7898d0251a53ecaeea02a623",
+        "name": "Sukruti",
+        "email": "dummy.email@miet.ac.in",
+        "mobile": "9191919191"
+      },
+      {
+        "_id": "999803da1a53ecaeea02a07e",
+        "name": "Neeraj Kumar",
+        "email": "another.example@miet.ac.in",
+        "mobile": "9898989898"
+      }
+    ]
+  }
 }
