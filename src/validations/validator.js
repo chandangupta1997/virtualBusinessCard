@@ -36,3 +36,6 @@ const isValidUrl =function(url){
     
     
 }
+
+
+module.exports ={isValid,isValidObjectId,isValidPassword,isValidPhone,isValidRequestBody,isValidUrl}

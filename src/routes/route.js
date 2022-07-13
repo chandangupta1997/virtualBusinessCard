@@ -5,9 +5,9 @@ const businessController = require('../controllers/businessController')
 
 
 
-router.post('/createBusinessCard',businessController.createBusCard)
+router.post('/BusinessCard',businessController.createBusCard)
 
-router.get('getBusinessCard',businessController.getBusinessCard)
+router.get('BusinessCard/:cardId',businessController.getBusinessCard)
 
 
 

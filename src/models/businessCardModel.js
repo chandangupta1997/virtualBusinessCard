@@ -45,29 +45,7 @@ const businessSchema = new mongoose.Schema({
 
     },
 
-    socialMediaLinks:[
-
-        {
-            type:String,
-
-
-        },
-        
-        {
-            type:String,
-            
-
-        },
-        
-        {
-            type:String,
-            
-
-        },
-
-
-
-    ],
+    socialMediaLinks:[],
         
 
 
