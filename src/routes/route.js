@@ -1,13 +1,13 @@
 const express = require('express');
 const router = express.Router();
 
-const businessController = require('../controllers/businessController')
+const businessCardController = require('../controllers/businessCardController')
 
 
 
-router.post('/BusinessCard',businessController.createBusCard)
+router.post('/BusinessCard',businessCardController.createBusCard)
 
-router.get('/BusinessCard/:cardId',businessController.getBusinessCard)
+router.get('/BusinessCard/:cardId',businessCardController.getBusinessCard)
 
 
 
