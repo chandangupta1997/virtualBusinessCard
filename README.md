@@ -3,8 +3,20 @@
 
 #Chandan Gupta 
 
+# approach 
+
+followed rest api standards
+maintain endpoints
+well classified and efficient code
+easy to intigrate  (with user authentication and authorization ) 
+
+
 Key points
 this is simple backend projects where user post a request to get its virtual business card 
+
+
+
+
 ********************Business Cart  Model********************
 Name of the Person
 Designation :string
@@ -17,12 +29,6 @@ Company Logo   :   req.files (will return a aws s3 bucket link )
 
 
 
-# approach 
-
-followed rest api standards
-maintain endpoints
-well classified and efficent code
-easy to intigrate 
 
 
 
