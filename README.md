@@ -5,7 +5,13 @@
 
 # approach 
 
+1) end points for where user can post the request
+2) use mongoose (mongo db ) to store json data. 
+3) end points for get request. 
+4) space for intigration. 
+
 followed rest api standards
+Endpoint: BASE_URL/BusinessCard
 maintain endpoints
 well classified and efficient code
 easy to intigrate  (with user authentication and authorization ) 
@@ -34,10 +40,9 @@ Company Logo   :   req.files (will return a aws s3 bucket link )
 
 
 
-Endpoint: BASE_URL/BusinessCard
 
-POST /functionup/interns
-Create a document for an intern.
+
+
 
 
 
